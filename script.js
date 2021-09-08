@@ -49,9 +49,10 @@ const asciiToString = (string, step) => String.fromCharCode(...string.map(ch => 
 const encodeString = (string, key) => {
   string = string.split('')
   let result = string
-
-  showLeft(result.join(''))
+  
+  showLeft('Просто строка в ascii:\n'+string.map(char => char.charCodeAt()))
   result = stringAddSpaces(result, key.spaceIndex)  
+  showLeft(result)
   showLeft(result)
   result = stringReplaceLetter(result, key.replacements)
   showLeft(result)
